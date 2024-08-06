@@ -1,0 +1,16 @@
+<div class="movie-list-container">
+  <div class="List-of-movies">
+    @if(isLoading){
+      <h1>Loading...</h1>
+      } 
+    @for (movie of  movieData; track movie.id) {
+    <app-card
+      [movie]="movie"
+      (deleteMovieEvent)="deleteMovieP(movie)"
+      [id] = "movie.id"
+    />
+
+    }
+  </div>
+</div>
+<h1>{{ msg }}</h1>

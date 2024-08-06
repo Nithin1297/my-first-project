@@ -1,0 +1,40 @@
+
+
+<div class="form">
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <mat-form-field class="example-full-width">
+        <mat-label>Movie Name</mat-label>
+        <input matInput [(ngModel)]="name" />
+      </mat-form-field>
+    </tr>
+    <tr>
+      <mat-form-field class="example-full-width">
+        <mat-label>Movie Rating</mat-label>
+        <input matInput [(ngModel)]="rating" />
+      </mat-form-field>
+    </tr>
+    <tr>
+      <mat-form-field class="example-full-width">
+        <mat-label>Description</mat-label>
+        <input matInput [(ngModel)]="summary" />
+      </mat-form-field>
+    </tr>
+    <tr>
+      <mat-form-field class="example-full-width">
+        <mat-label>Image Link</mat-label>
+        <input matInput [(ngModel)]="poster" />
+      </mat-form-field>
+    </tr>
+    <tr>
+      <mat-form-field class="example-full-width">
+        <mat-label>Trailer</mat-label>
+        <input matInput [(ngModel)]="trailer" />
+      </mat-form-field>
+    </tr>
+  </table>
+  
+  <button (click)="add()" mat-raised-button class="material-symbols-outlined">
+Add Movie
+</button>
+</div>

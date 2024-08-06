@@ -1,0 +1,20 @@
+<body>
+  <div class="movie-details">
+    <!-- <iframe
+      width="100%"
+      height="514"
+      [src]="movie.trailer"
+      [title]="movie.name"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe> -->
+    <div class="movie-content">
+      <h2>{{ movie.name }}</h2>
+      <h4>⭐ {{ movie.rating }}</h4>
+    </div>
+    <p>{{ movie.summary }}</p>
+    <!-- <img [src]="movie.poster" alt="{{ movie.name }}" /> -->
+  </div>
+</body>

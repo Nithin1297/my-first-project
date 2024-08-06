@@ -1,0 +1,52 @@
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+/>
+
+<!-- <body> -->
+
+<div class="like-dislike">
+  <button mat-raised-button matBadge="{{ like }}" (click)="likeIncreament()">
+    <span class="material-symbols-outlined"> sentiment_satisfied </span>
+  </button>
+  <button
+    mat-raised-button
+    matBadge="{{ dislike }}"
+    (click)="disLikeIncreament()"
+  >
+    <span class="material-symbols-outlined"> sentiment_dissatisfied </span>
+  </button>
+</div>
+
+<!-- <progress [max]="like + dislike" [value]="like"></progress>
+  @if(like >= dislike + 10){
+  <h2>Awesome</h2>
+  }
+  <input type="text" [(ngModel)]="color" [style.background]="color" />
+  <button (click)="addColor()">Add Color</button>
+
+  <p>{{ colorarray }}</p>
+  <div>
+    @for(clr of colorarray; track $index){
+    <app-color-game [clr]="clr"/>
+    }
+  </div> -->
+
+<!-- ngStyle="{'background' : color}" -->
+<!-- <div class="red">
+      <div class="green" ngStyle="{'max-width.px' : like}"></div>
+    </div> -->
+<!-- <input
+    type="range"
+    min="0"
+    max={{ like }}
+    +
+    {{dislike}}
+    value="90"
+    step="10"
+  /> -->
+<!-- </body> -->

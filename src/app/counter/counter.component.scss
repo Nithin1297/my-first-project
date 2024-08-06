@@ -1,0 +1,25 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    max-height: 100vh;
+}
+.btn{
+    display: flex;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 10,
+    'opsz' 30;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  .like-dislike{
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  

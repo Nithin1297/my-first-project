@@ -1,0 +1,53 @@
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+/>
+<div class="movies">
+  <div class="card">
+    <img src="{{ movie.poster }}" alt="Poster" />
+    <div class="container">
+      <div class="title-des">
+        <p>
+          {{ movie.name }}
+        </p>
+        <button mat-button (click)="toggleDesMovie()">
+          @if (showDes) {
+          <span class="material-symbols-outlined"> keyboard_arrow_up </span>}
+          @else{
+          <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+          }
+        </button>
+        
+        <button  routerLink="/movies/{{ movie.id }}" mat-icon-button>
+          <span class="material-symbols-outlined"> info</span>
+        </button>
+      </div>
+
+      <div class="rat-edit">
+        <div>
+          <span mat-icon class="material-symbols-outlined"> family_star </span
+          >{{ movie.rating }}
+        </div>
+        <button  routerLink="/movies/edit/{{ movie.id }}" mat-icon-button>
+          <span class="material-symbols-outlined"> Edit</span>
+        </button>
+      </div>
+
+      @if (showDes) {
+      <p>
+        {{ movie.summary }}
+      </p>
+      }
+      <div class="likes-delete">
+        <app-counter />
+        <button mat-mini-fab (click)="deleteMovie()">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

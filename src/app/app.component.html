@@ -1,0 +1,29 @@
+<body>
+  <header>
+    <nav>
+      <div class="example-button-row">
+        <a routerLink="" mat-raised-button routerLink=""
+          >Home
+          <mat-icon
+            aria-hidden="false"
+            aria-label="Example home icon"
+            fontIcon="home"
+          ></mat-icon
+        ></a>
+      </div>
+
+      <div class="example-button-row">
+        <a mat-raised-button routerLink="/movies">Movies</a>
+      </div>
+
+      <div class="example-button-row">
+        <a mat-raised-button routerLink="/movies/add">Add Movie</a>
+      </div>
+
+      <div class="example-button-row">
+        <a mat-raised-button routerLink="Profile">Profile</a>
+      </div>
+    </nav>
+  </header>
+  <router-outlet />
+</body>
