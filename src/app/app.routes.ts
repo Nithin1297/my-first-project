@@ -27,7 +27,8 @@ export const routes: Routes = [
     path: 'movies',
     children: [
       { path: '', component: MovieListComponent },
-      { path: 'add', component: AddmovieComponent, canActivate: [authGuard] },
+      // { path: 'add', component: AddmovieComponent, canActivate: [authGuard] },
+      { path: 'add', component: AddmovieComponent },
       { path: 'edit/:id', component: EditMovieComponent },
     ],
   },
