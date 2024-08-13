@@ -29,7 +29,7 @@ export class CardComponent {
   }
 
   @Input() movie = {
-    id:"",
+    movieId:"",
     name: 'Love Today',
     rating: 9.1,
     summary:
