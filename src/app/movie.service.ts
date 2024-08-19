@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { newMovie } from './movie-interface';
+import { HttpClient } from '@angular/common/http';
+import { User } from './movie-list/movie-list.component';
 
 export type Movie = {
   movieId: string;
@@ -15,8 +17,9 @@ export type Movie = {
 export class MovieService {
   // API = `https://669a42859ba098ed61fef71c.mockapi.io/Movies`;
   // API = `http://localhost:4000`;
-  API = `https://node-8hsv.onrender.com`;
- 
+  // API = `https://node-8hsv.onrender.com`;
+  API = `https://669a428b9ba098ed61fef744.mockapi.io/Movies-Deta`;
+
   // movieData = [
   //   {
   //     id: '',
@@ -57,7 +60,11 @@ export class MovieService {
   //   },
   // ];
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
+
+  searchUser(searchTerm: string) {
+    return this.http.get<Movie[]>(`${this.API}?search=${searchTerm}`);
+  }
 
   addMovie(newMovie: newMovie) {
     return fetch(this.API, {
@@ -70,7 +77,8 @@ export class MovieService {
   }
 
   getAllMoviesP(): Promise<Movie[]> {
-    return fetch(`${this.API}/movies`).then((res) => res.json());
+    // return fetch(`${this.API}/movies`).then((res) => res.json());
+    return fetch(`${this.API}`).then((res) => res.json());
   }
 
   getMovieByIdP(id: string): Promise<Movie> {

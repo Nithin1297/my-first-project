@@ -1,13 +1,21 @@
 <div class="movie-list-container">
+  <form [formGroup]="searchForm">
+    <input placeholder="search..." formControlName="search" />
+  </form>
+
+  @for (user of movieNames; track $index){
+  <h2>{{ user.name }}</h2>
+  }
   <div class="List-of-movies">
-    @if(isLoading){
-      <h1>Loading...</h1>
-      } 
-    @for (movie of  movieData; track movie.movieId) {
+    @if (!isLoading && movieData.length == 0) {
+    <h1>No results...</h1>
+    } @if(isLoading){
+    <h1>Loading...</h1>
+    } @for (movie of movieData; track $index) {
     <app-card
       [movie]="movie"
       (deleteMovieEvent)="deleteMovieP(movie)"
-      [id] = "movie.movieId"
+      [id]="movie.movieId"
     />
 
     }
